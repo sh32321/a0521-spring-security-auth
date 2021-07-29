@@ -1,6 +1,7 @@
 package com.a0521.auth.web;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -26,8 +27,9 @@ public class UserRegistrationController {
 	}
 	
 	@GetMapping
-	public String showRegistrationForm(){
-		return "registration";
+	public String showRegistrationForm(Model model){
+		model.addAttribute("title", "Register");
+		return "auth/registration";
 	}
 	
 	@PostMapping

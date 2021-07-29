@@ -16,7 +16,6 @@ import com.a0521.auth.models.Role;
 import com.a0521.auth.models.User;
 import com.a0521.auth.repository.UserRepository;
 import com.a0521.auth.web.dto.UserRegistrationDto;
-import com.sun.org.apache.bcel.internal.generic.NEW;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -44,9 +43,9 @@ public class UserServiceImpl implements UserService {
 		return userRepo.save(user);
 	}
 	
+	
 	@Override
-	@Override
-	public UserDetails loadedUserByUsername(String username) throws UsernameNotFoundException{
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException{
 		
 		User user = userRepo.findByEmail(username);
 		
