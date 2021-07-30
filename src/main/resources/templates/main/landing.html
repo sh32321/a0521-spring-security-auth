@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
-<head th:replace="/fragments/head :: head(title=${title})">
+<head th:replace="fragments/head :: head(title=${title})">
 <body>
-	<section th:replace="/fragments/nav :: navigation"></section>
+	<section th:replace="fragments/nav :: navigation"></section>
 	
 	<section class='section m-0 p-0'>
 		<div class='container'>
@@ -29,6 +29,6 @@
 		</div>
 	</section>
 
-	<section th:replace="/fragments/footer :: footer"></section>
+	<section th:replace="fragments/footer :: footer"></section>
 </body>
 </html>
